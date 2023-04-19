@@ -1,28 +1,52 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      <!-- Pesel Column -->
+      <ng-container matColumnDef="pesel">
+        <th mat-header-cell *matHeaderCellDef> Pesel </th>
+        <td mat-cell *matCellDef="let user"> {{user.pesel}} </td>
       </ng-container>
   
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <!-- First name Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> Imię </th>
+        <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
       </ng-container>
-  
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+
+      <!-- Last name Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+        <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
       </ng-container>
-  
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Symbol </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+
+      <!-- Street Column -->
+      <ng-container matColumnDef="street">
+        <th mat-header-cell *matHeaderCellDef> Ulica </th>
+        <td mat-cell *matCellDef="let user"> {{user.street}} </td>
+      </ng-container>
+
+      <!-- House number Column -->
+      <ng-container matColumnDef="houseNumber">
+        <th mat-header-cell *matHeaderCellDef> Nr domu </th>
+        <td mat-cell *matCellDef="let user"> {{user.houseNumber}} </td>
+      </ng-container>
+      
+      <!-- Apartment number Column -->
+      <ng-container matColumnDef="apartmentNumber">
+        <th mat-header-cell *matHeaderCellDef> Nr mieszkania </th>
+        <td mat-cell *matCellDef="let user"> {{user.apartmentNumber}} </td>
+      </ng-container>
+
+       <!-- zipCode Column -->
+      <ng-container matColumnDef="zipCode">
+        <th mat-header-cell *matHeaderCellDef> Kod pocztowy </th>
+        <td mat-cell *matCellDef="let user"> {{user.zipCode}} </td>
+      </ng-container>
+
+      <!-- city Column -->
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef> Miasto </th>
+        <td mat-cell *matCellDef="let user"> {{user.city}} </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
