@@ -1,3 +1,17 @@
 table {
     width: 100%;
 }
+
+.table-small {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .table-small {
+        display: table;
+    }
+
+    .table {
+        display: none;
+    }
+}

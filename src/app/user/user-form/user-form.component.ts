@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../models/user';
 import { UserService } from '../service/user.service';
+import { UserColumn } from '../models/user-column';
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
@@ -10,7 +11,8 @@ import { UserService } from '../service/user.service';
 })
 export class UserFormComponent implements AfterViewInit, OnInit {
   @Input() isPagination: boolean = true;
-  displayedColumns: string[] = ['pesel', 'firstName', 'lastName', 'street', 'houseNumber', 'apartmentNumber', 'zipCode', 'city'];
+  displayedColumns: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.STREET, UserColumn.HOUSE_NUMBER, UserColumn.APARTMRNT_NUMBER, UserColumn.ZIP_CODE, UserColumn.CITY];
+  dislayedColumnsSmall: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.CITY];
   dataSource = new MatTableDataSource<User>([]);
 
   @ViewChild(MatPaginator)
