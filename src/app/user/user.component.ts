@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserColumn } from './models/user-column';
 
 @Component({
   selector: 'app-user',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   isPagination: boolean = true;
+  dislayedColumnsSmall: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.CITY];
 }

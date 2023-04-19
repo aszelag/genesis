@@ -10,10 +10,11 @@ import { UserColumn } from '../models/user-column';
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements AfterViewInit, OnInit {
-  @Input() isPagination: boolean = true;
   displayedColumns: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.STREET, UserColumn.HOUSE_NUMBER, UserColumn.APARTMRNT_NUMBER, UserColumn.ZIP_CODE, UserColumn.CITY];
-  dislayedColumnsSmall: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.CITY];
   dataSource = new MatTableDataSource<User>([]);
+
+  @Input() isPagination: boolean = true;
+  @Input() dislayedColumnsSmall: UserColumn[] = this.displayedColumns;
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
