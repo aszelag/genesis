@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../models/user';
@@ -9,6 +9,7 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./user-form.component.scss']
 })
 export class UserFormComponent implements AfterViewInit, OnInit {
+  @Input() isPagination: boolean = true;
   displayedColumns: string[] = ['pesel', 'firstName', 'lastName', 'street', 'houseNumber', 'apartmentNumber', 'zipCode', 'city'];
   dataSource = new MatTableDataSource<User>([]);
 
