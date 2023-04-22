@@ -7,7 +7,7 @@ import { UserColumn } from './models/user-column';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  isPagination: boolean = true;
+  isPagination: boolean = false;
   isDataLoaded: boolean = false;
   dislayedColumnsSmall: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.CITY];
 

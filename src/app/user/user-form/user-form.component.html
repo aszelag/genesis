@@ -1,5 +1,5 @@
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" class="table">
+  <table mat-table [dataSource]="dataSource" class="table" *ngIf="isDataLoaded">
 
     <ng-container matColumnDef="{{this.displayedColumns[0]}}">
       <th mat-header-cell *matHeaderCellDef> Pesel </th>
@@ -45,7 +45,7 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <table mat-table [dataSource]="dataSource" class="table-small">
+  <table mat-table [dataSource]="dataSource" class="table-small" *ngIf="isDataLoaded">
 
     <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[0])" matColumnDef="{{this.displayedColumns[0]}}">
       <th mat-header-cell *matHeaderCellDef> Pesel </th>
