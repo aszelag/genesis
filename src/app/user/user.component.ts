@@ -8,5 +8,10 @@ import { UserColumn } from './models/user-column';
 })
 export class UserComponent {
   isPagination: boolean = true;
+  isDataLoaded: boolean = false;
   dislayedColumnsSmall: UserColumn[] = [UserColumn.PESEL, UserColumn.FIRST_NAME, UserColumn.LAST_NAME, UserColumn.CITY];
+
+  changeDataLoaded(value: boolean): void {
+    this.isDataLoaded = value;
+  }
 }

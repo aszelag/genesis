@@ -1,101 +1,101 @@
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" class="table">
+  <table mat-table [dataSource]="dataSource" class="table">
 
-      <ng-container matColumnDef="{{this.displayedColumns[0]}}">
-        <th mat-header-cell *matHeaderCellDef> Pesel </th>
-        <td mat-cell *matCellDef="let user"> {{user.pesel}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="{{this.displayedColumns[1]}}">
-        <th mat-header-cell *matHeaderCellDef> Imię </th>
-        <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
-      </ng-container>
+    <ng-container matColumnDef="{{this.displayedColumns[0]}}">
+      <th mat-header-cell *matHeaderCellDef> Pesel </th>
+      <td mat-cell *matCellDef="let user"> {{user.pesel}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="{{this.displayedColumns[2]}}">
-        <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
-        <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
-      </ng-container>
+    <ng-container matColumnDef="{{this.displayedColumns[1]}}">
+      <th mat-header-cell *matHeaderCellDef> Imię </th>
+      <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="{{this.displayedColumns[3]}}">
-        <th mat-header-cell *matHeaderCellDef> Ulica </th>
-        <td mat-cell *matCellDef="let user"> {{user.street}} </td>
-      </ng-container>
+    <ng-container matColumnDef="{{this.displayedColumns[2]}}">
+      <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+      <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="{{this.displayedColumns[4]}}">
-        <th mat-header-cell *matHeaderCellDef> Nr domu </th>
-        <td mat-cell *matCellDef="let user"> {{user.houseNumber}} </td>
-      </ng-container>
-      
-      <ng-container matColumnDef="{{this.displayedColumns[5]}}">
-        <th mat-header-cell *matHeaderCellDef> Nr mieszkania </th>
-        <td mat-cell *matCellDef="let user"> {{user.apartmentNumber}} </td>
-      </ng-container>
+    <ng-container matColumnDef="{{this.displayedColumns[3]}}">
+      <th mat-header-cell *matHeaderCellDef> Ulica </th>
+      <td mat-cell *matCellDef="let user"> {{user.street}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="{{this.displayedColumns[6]}}">
-        <th mat-header-cell *matHeaderCellDef> Kod pocztowy </th>
-        <td mat-cell *matCellDef="let user"> {{user.zipCode}} </td>
-      </ng-container>
+    <ng-container matColumnDef="{{this.displayedColumns[4]}}">
+      <th mat-header-cell *matHeaderCellDef> Nr domu </th>
+      <td mat-cell *matCellDef="let user"> {{user.houseNumber}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="{{this.displayedColumns[5]}}">
+      <th mat-header-cell *matHeaderCellDef> Nr mieszkania </th>
+      <td mat-cell *matCellDef="let user"> {{user.apartmentNumber}} </td>
+    </ng-container>
 
-      <ng-container matColumnDef="{{this.displayedColumns[7]}}">
-        <th mat-header-cell *matHeaderCellDef> Miasto </th>
-        <td mat-cell *matCellDef="let user"> {{user.city}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+    <ng-container matColumnDef="{{this.displayedColumns[6]}}">
+      <th mat-header-cell *matHeaderCellDef> Kod pocztowy </th>
+      <td mat-cell *matCellDef="let user"> {{user.zipCode}} </td>
+    </ng-container>
 
-    <table mat-table [dataSource]="dataSource" class="table-small">
+    <ng-container matColumnDef="{{this.displayedColumns[7]}}">
+      <th mat-header-cell *matHeaderCellDef> Miasto </th>
+      <td mat-cell *matCellDef="let user"> {{user.city}} </td>
+    </ng-container>
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[0])" matColumnDef="{{this.displayedColumns[0]}}">
-        <th mat-header-cell *matHeaderCellDef> Pesel </th>
-        <td mat-cell *matCellDef="let user"> {{user.pesel}} </td>
-      </ng-container>
-  
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[1])" matColumnDef="{{this.displayedColumns[1]}}">
-        <th mat-header-cell *matHeaderCellDef> Imię </th>
-        <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
-      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[2])" matColumnDef="{{this.displayedColumns[2]}}">
-        <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
-        <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
-      </ng-container>
+  <table mat-table [dataSource]="dataSource" class="table-small">
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[3])" matColumnDef="{{this.displayedColumns[3]}}">
-        <th mat-header-cell *matHeaderCellDef> Ulica </th>
-        <td mat-cell *matCellDef="let user"> {{user.street}} </td>
-      </ng-container>
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[0])" matColumnDef="{{this.displayedColumns[0]}}">
+      <th mat-header-cell *matHeaderCellDef> Pesel </th>
+      <td mat-cell *matCellDef="let user"> {{user.pesel}} </td>
+    </ng-container>
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[4])" matColumnDef="{{this.displayedColumns[4]}}">
-        <th mat-header-cell *matHeaderCellDef> Nr domu </th>
-        <td mat-cell *matCellDef="let user"> {{user.houseNumber}} </td>
-      </ng-container>
-      
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[5])" matColumnDef="{{this.displayedColumns[5]}}">
-        <th mat-header-cell *matHeaderCellDef> Nr mieszkania </th>
-        <td mat-cell *matCellDef="let user"> {{user.apartmentNumber}} </td>
-      </ng-container>
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[1])" matColumnDef="{{this.displayedColumns[1]}}">
+      <th mat-header-cell *matHeaderCellDef> Imię </th>
+      <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+    </ng-container>
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[6])" matColumnDef="{{this.displayedColumns[6]}}">
-        <th mat-header-cell *matHeaderCellDef> Kod pocztowy </th>
-        <td mat-cell *matCellDef="let user"> {{user.zipCode}} </td>
-      </ng-container>
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[2])" matColumnDef="{{this.displayedColumns[2]}}">
+      <th mat-header-cell *matHeaderCellDef> Nazwisko </th>
+      <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
+    </ng-container>
 
-      <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[7])" matColumnDef="{{displayedColumns[7]}}">
-        <th mat-header-cell *matHeaderCellDef> Miasto </th>
-        <td mat-cell *matCellDef="let user"> {{user.city}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="dislayedColumnsSmall"></tr>
-      <tr mat-row *matRowDef="let row; columns: dislayedColumnsSmall;"></tr>
-    </table>
-  
-    <mat-paginator 
-      *ngIf="isPagination"
-      [pageSizeOptions]="[5, 10, 20]"
-      showFirstLastButtons
-      aria-label="Select page of periodic elements"
-    >
-    </mat-paginator>
-  </div>
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[3])" matColumnDef="{{this.displayedColumns[3]}}">
+      <th mat-header-cell *matHeaderCellDef> Ulica </th>
+      <td mat-cell *matCellDef="let user"> {{user.street}} </td>
+    </ng-container>
+
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[4])" matColumnDef="{{this.displayedColumns[4]}}">
+      <th mat-header-cell *matHeaderCellDef> Nr domu </th>
+      <td mat-cell *matCellDef="let user"> {{user.houseNumber}} </td>
+    </ng-container>
+    
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[5])" matColumnDef="{{this.displayedColumns[5]}}">
+      <th mat-header-cell *matHeaderCellDef> Nr mieszkania </th>
+      <td mat-cell *matCellDef="let user"> {{user.apartmentNumber}} </td>
+    </ng-container>
+
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[6])" matColumnDef="{{this.displayedColumns[6]}}">
+      <th mat-header-cell *matHeaderCellDef> Kod pocztowy </th>
+      <td mat-cell *matCellDef="let user"> {{user.zipCode}} </td>
+    </ng-container>
+
+    <ng-container *ngIf="dislayedColumnsSmall.includes(displayedColumns[7])" matColumnDef="{{displayedColumns[7]}}">
+      <th mat-header-cell *matHeaderCellDef> Miasto </th>
+      <td mat-cell *matCellDef="let user"> {{user.city}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="dislayedColumnsSmall"></tr>
+    <tr mat-row *matRowDef="let row; columns: dislayedColumnsSmall;"></tr>
+  </table>
+
+  <mat-paginator 
+    *ngIf="isPagination"
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

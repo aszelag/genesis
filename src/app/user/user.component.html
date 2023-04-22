@@ -1,4 +1,9 @@
 <app-user-form
     [isPagination]="isPagination"
     [dislayedColumnsSmall]="dislayedColumnsSmall"
+    (dataLoaded)="changeDataLoaded($event)"
 ></app-user-form>
+<mat-progress-bar 
+    mode="indeterminate"
+    *ngIf="!isDataLoaded"
+></mat-progress-bar> 
